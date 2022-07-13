@@ -129,7 +129,7 @@ p
     background: var(--img) !important;
     background-size: cover !important;
     background-position: center !important;
-    transition: 0.25s;
+    transition: 2s;
 }
 .description
 {
@@ -147,4 +147,16 @@ p
                 0 0 92px rgba(56,207,244,1),
                 0 0 151px rgba(56,207,244,1);
     z-index: 2;
+}
+button
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,20,1);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 3vmin;
+    z-index: 3;
 }
