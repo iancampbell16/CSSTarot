@@ -61,20 +61,18 @@ for (let i = 0; i < 22; i++) {
             revealClicks++
             if (revealClicks == 3) {
                 let description = document.querySelector('.description');
-                description.textContent = "Hover over a Card to see Interpretation";
+                description.textContent = "Click a Card to see Interpretation";
             }
-            el.onmouseover = event => {
-                // change and reveal description
-                if (revealClicks == 3) {
-                    let description = document.querySelector('.description');
-                    message = el.style.getPropertyValue('--info').split('"').join("'");
-                    if (message.slice(-1) == "'") {
-                        message = message.slice(0, -1);
-                    } else if (message.slice(-2) == "' ") {
-                        message = message.slice(0, -2);
-                    }
-                    description.textContent = message;
+            // change and reveal description
+            if (revealClicks > 3) {
+                let description = document.querySelector('.description');
+                message = el.style.getPropertyValue('--info').split('"').join("'");
+                if (message.slice(-1) == "'") {
+                    message = message.slice(0, -1);
+                } else if (message.slice(-2) == "' ") {
+                    message = message.slice(0, -2);
                 }
+                description.textContent = message;
             }
         }
     });
